@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit");
+
+body {
+  /* display: flex; */
+  align-items: center;
+  background-color: #f3f3f3 !important;
+  background-image: url("/bg.png");
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Kanit, sans-serif";
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.App {
+  text-align: center;
+}
+/* HEADER */
+#header {
+  background-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(231, 227, 235);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: rgb(0, 0, 0);
+  border-left-style: none;
+  border-left-width: 0px;
+  border-right-color: rgb(0, 0, 0);
+  border-right-style: none;
+  border-right-width: 0px;
+  border-top-color: rgb(0, 0, 0);
+  border-top-style: none;
+  border-top-width: 0px;
+  box-sizing: border-box;
+  color-scheme: light;
+  height: 56px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 0px;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  vertical-align: baseline;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-nav-left {
+  display: flex;
+  flex: 1 0 40%;
+}
+
+.site-nav-right {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 0 40%;
+}
+
+.site-nav-middle {
+  display: flex;
+  flex: 1 0 20%;
+  justify-content: center;
+}
+
+#header .header-metamask {
+  display: flex;
+  align-items: center;
+  height: 56px;
+}
+
+#header .header-title {
+  align-items: center;
+  height: 56px;
+  display: flex;
+}
+
+.wallet-connected {
+  flex: auto;
+  float: right;
+  text-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: #eff4f5;
+  border-radius: 16px;
+  box-shadow: rgb(0 0 0 / 10%) 0px -2px 0px inset;
+  cursor: pointer;
+  display: inline-flex;
+  padding-left: 16px;
+  padding-right: 20px;
+  position: relative;
+  height: 32px;
+}
+
+.wallet-connected svg {
+  margin-right: 10px;
+}
+
+/* USER */
+.buy-ticket {
+  margin-top: 50px;
+  /* margin: auto; */
+}
+
+.buy-ticket ul {
+  display: inline-block;
+  align-content: center;
+  padding-inline-start: 0px;
+}
+
+.buy-ticket ul li {
+  display: inline-block;
+  align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.buy-ticket ul li input {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px inset;
+  text-align: center;
+  background-color: #eeeaf4;
+}
+
+.amount-div {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.amount-div span {
+  border: none;
+}
+
+.amount-div input {
+  border: none;
+  width: 80px;
+  height: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: rgb(74 74 104 / 10%) 0px 2px 2px -1px inset;
+  color: rgb(69, 42, 122);
+}
+
+.button {
+  background-color: #212529;
+  position: relative;
+  font-weight: 300;
+  color: white;
+  box-shadow: none;
+  border-color: #212529;
+  outline: 0;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #fbb33a;
+  border-color: #fbb33a;
+  box-shadow: none;
+  border: 0;
+}
+
+#ticket-container table {
+  border: 1px solid #fbb33a;
+  border-collapse: collapse;
+  width: 70%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ticket-container tr {
+  background-color: #f2f2f2;
+}
+
+#ticket-container td,
+#ticket-container th {
+  border: 1px solid rgb(69, 42, 122);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+#ticket-container .number-col {
+  width: 25%;
+}
+
+#ticket-container .amount-col {
+  width: 30%;
+}
+
+#ticket-container .time-col {
+  width: 45%;
+}
+
+/* #list-ticket tr:hover {background-color: #ddd;} */
+
+#ticket-container th {
+  background-color: #04aa6d;
+  color: white;
+  text-align: center;
+}
