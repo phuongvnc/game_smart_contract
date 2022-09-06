@@ -1,0 +1,38 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:5.0.6
+    env_file: ./mongo_db/mongo.env
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: $${MONGO_DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: $${MONGO_DB_PASSWORD}
+    networks:
+      - backend
+
+  app:
+    container_name: app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env/development.env
+    restart: unless-stopped
+    tty: true
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: npm start
+    networks:
+      - backend
+    depends_on:
+      - mongo 
+
+networks:
+  backend:
+
+volumes:
+  mongo:
